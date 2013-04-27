@@ -1,6 +1,5 @@
 #One Month Rails
 
-This is the sameple application for
-[-One Month Rails: Teach Yourself to Code](http://onemonthrails.com)
+You guys are all faggots!
 
-by [Yuee Seo]
+by [eeuy]
