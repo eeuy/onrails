@@ -1,0 +1,29 @@
+/*chaning font*/
+/*$baseFontFamily: Cantora One;
+@import url(http://fonts.googleapis.com/css?family=Cantora+One);*/
+
+$btnPrimaryBackground: green;
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
+
+@import 'bootstrap';
+
+body{
+	padding-top: 60px;
+}
+
+@import 'bootstrap-responsive';
+
+.navbar-inner{
+	@inclue box-shadow(none);
+	border: 0;
+}
+
+.footer {
+
+	margin-top: 50px;
+	color: $grayLight;
+	a{
+		color:$gray;
+	}
+}
