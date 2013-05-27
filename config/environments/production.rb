@@ -1,3 +1,4 @@
+#Production is for the heroku app
 Onrails::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -64,4 +65,9 @@ Onrails::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  #In production, :host should be set to the actual host of your application.
+  #for setting up devise (user log in)
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
 end

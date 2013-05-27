@@ -1,6 +1,7 @@
+<!-- Responsive Nav Bar (Collapses when shrinking the page)-->
 <div class="navbar navbar-fixed-top"> 
   <div class="navbar-inner">
-    <div class="container">
+    <div class="container"> <!-- provides a common fixed-width -->
  
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -10,16 +11,20 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="#">GANGSTA</a>
- 
+      <%= link_to "GANGSTA", root_path, class: "brand" %>
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
         <ul class="nav">
         	<li><%= link_to "Home", root_path %></li>
 			<li><%= link_to "About Us", about_path %></li>
 		</ul>
-		<ul class="nav pull-right">
-        	<li><%= link_to "Login",'#'%></li>
+		<ul class="nav pull-right"> <!-- moves the Login button to the right-->
+      <% if user_signed_in? %> <!-- shows if the user is loged in show the logout butt. vise versa -->
+          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+        	<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+          <li><%= link_to "Login", new_user_session_path %></li> <!-- new_user_session_path logs into the acc -->
+      <% end %>
 		</ul>
       </div>
  

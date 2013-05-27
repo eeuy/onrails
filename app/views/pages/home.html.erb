@@ -1,9 +1,29 @@
-<div class="hero-unit">
-	<h1>Welcome to UECO's house of OG's</h1>
-	<p>
-		This is the place where Original Gangstas reside
-		<%= link_to "HELL", "http://www.youtube.com/user/HDstarcraft?feature="%>
-	</p>
-	<p>
-		<%= link_to "Sign up now!", "#", class: "btn btn-primary btn-large"%>
-	</p>
+<% if user_signed_in? %>
+	<h1>Youre logged in</h1>
+<% else %>
+	<div class="hero-unit">
+		<h1>Welcome to UECO's house of OG's</h1>
+		<!-- class="lead" gives emphasis--> 
+		<p class="lead">
+			This is the place where Original Gangstas reside
+			<%= link_to "HELL", "http://www.youtube.com/user/HDstarcraft?feature="%> <!-- < % is used instead of a href for sublime text. accomplishes the same code -->
+		</p>
+		<p>
+			<%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-primary btn-large"%> <!-- new_user_registration_path sends to a log in page -->
+		</p>
+		<h2>
+			Only the BEST BUDS AROUND!
+		</h2>
+		<ul class="inline"> <!-- lists next to each other -->
+			<li>Face off OG</li>
+			<li>Abusive OG</li>
+			<li>Holy Grail OG</li>
+		</ul>
+		<hr class="bs-docs-separator"> <!--line sperator-->
+		<ul class="inline">
+			<li>SFV OG</li>
+			<li>Banana OG</li>
+			<li>Diamond OG</li>
+		</ul>
+		<hr class="bs-docs-separator"> <!--line sperator-->
+<% end %>

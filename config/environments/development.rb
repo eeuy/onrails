@@ -1,3 +1,4 @@
+#This updates to the local host route
 Onrails::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -34,4 +35,6 @@ Onrails::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

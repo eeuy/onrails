@@ -1,0 +1,19 @@
+<h2>Sign up</h2>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class: 'form-horizontal'}) do |f| %> <!--add simple_form and class form-horizontal to move to the right, form-horizontal is a bootstrap command-->
+  <%= f.error_notification %>
+
+  <%= f.input :name %>
+  <%= f.input :email %> <!--repositions the email to the right and gives more room-->
+  <%= f.input :password %> <!--repositions the passowrd to the right and gives room-->
+  <%= f.input :password_confirmation %> <!--^""-->
+
+ <!-- <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div> --> <!--how it is originally done-->
+
+  <div class="form-actions">
+  	<%= f.submit "Sign up", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

@@ -1,15 +1,22 @@
-/*chaning font*/
-/*$baseFontFamily: Cantora One;
-@import url(http://fonts.googleapis.com/css?family=Cantora+One);*/
+/* $ only applies to classes in other sheets*/
+/* $baseFontFamily: Cantora One; /*changing font*/
+@import url(http://fonts.googleapis.com/css?family=Cantora+One);
 
-$btnPrimaryBackground: green;
-$navbarBackgroundHighlight: white;
+$btnPrimaryBackground: green; /*changing color of nav button*/
+													
+$navbarBackgroundHighlight: white; /*gives highlight/color to the navbar*/
 $navbarBackground: white;
 
-@import 'bootstrap';
+/*$heroUnitBackground:*/ /*makes the hero-unit background a color */
 
-body{
-	padding-top: 60px;
+$bodyBackground: white; /*changes the entire background color*/
+
+@import 'bootstrap'; /*gives bootstrap framework to the app*/
+
+body{ /*changes everything in the body*/
+
+	padding-top: 60px; /*gives padding against the navbar*/
+	background-color: $white; /*changes the entire background*/
 }
 
 @import 'bootstrap-responsive';
@@ -20,10 +27,14 @@ body{
 }
 
 .footer {
-
-	margin-top: 50px;
-	color: $grayLight;
-	a{
-		color:$gray;
+	background-color: white; /* makes the background around text blue */
+	margin-top: 50px;/* puts space inbetween the footer and next closest thing */
+	color:$blue; /* changes the color of all the fonts */
+	a{ /* changes only the color of the hyperlinks, overrides the previous color*/
+		color:$green;
 	}
 }
+.lead { /* changes the font size of class="lead"*/
+	font-size: 30px;
+}
+
